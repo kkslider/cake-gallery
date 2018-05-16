@@ -1,17 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ThumbnailContainer from './ThumbnailContainer';
 
 const PhotoGallery = props => {
-  const imageContainers = props.images.map(image => {
-    return (
-      <div key={image.id}>
-        <img src={image.thumbnail_url} />
-      </div>
-    );
-  });
-
   return (
-    <div>{imageContainers}</div>
+    <div>
+      {
+        props.images.map(image => {
+          return <ThumbnailContainer
+            key={image.id}
+            image={image}
+          />
+        })
+      }
+    </div>
   );
 }
 
