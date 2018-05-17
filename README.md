@@ -2,6 +2,8 @@
 
 This is a React app built using `create-react-app`. The content is a photo gallery filled with images of cake, featuring lightbox functionality with photo click/swipe navigation.
 
+![screenshot](https://i.imgur.com/7rLSMnp.png)
+
 ## Getting started
 
 1.  You will first want to pull down this repository and run `npm install` in your Terminal to download the needed dependencies
