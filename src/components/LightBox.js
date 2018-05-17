@@ -14,9 +14,9 @@ const LightBox = props => {
     <div className={`LightBox ${shouldShow}`}>
       <img className="close" src={closeIcon} alt="close-icon" onClick={props.handleClose} />
       <div className="image-row">
-        <img className="left-arrow" src={leftArrow} alt="left-navigation-arrow" />
+        <img className="left-arrow" src={leftArrow} alt="left-navigation-arrow" onClick={props.goLeft} />
         <img className="detailed-image" src={imageUrl} alt='detailed-image' />
-        <img className="right-arrow" src={rightArrow} alt="right-navigation-arrow" />
+        <img className="right-arrow" src={rightArrow} alt="right-navigation-arrow" onClick={props.goRight} />
       </div>
       <span>{caption}</span>
     </div >

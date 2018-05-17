@@ -26,6 +26,28 @@ class PhotoGallery extends React.Component {
     });
   }
 
+  showPreviousImage = () => {
+    const currentImageId = this.state.selectedImage.id;
+
+    if (currentImageId > 0) {
+      const previousImage = this.props.images[currentImageId - 1];
+      this.setState({
+        selectedImage: previousImage
+      });
+    }
+  }
+
+  showNextImage = () => {
+    const currentImageId = this.state.selectedImage.id;
+
+    if (currentImageId < this.props.images.length - 1) {
+      const nextImage = this.props.images[currentImageId + 1];
+      this.setState({
+        selectedImage: nextImage
+      });
+    }
+  }
+
   render() {
     return (
       <div className="PhotoGallery" >
@@ -42,6 +64,8 @@ class PhotoGallery extends React.Component {
           show={this.state.showLightBox}
           handleClose={this.hideLightBox}
           image={this.state.selectedImage}
+          goLeft={this.showPreviousImage}
+          goRight={this.showNextImage}
         />
       </div>
     );
