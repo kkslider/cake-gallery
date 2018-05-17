@@ -13,17 +13,18 @@ class PhotoGallery extends React.Component {
     };
   }
 
-  showModal = () => {
+  showLightBox = (image) => {
     this.setState({
-      showLightBox: true
+      showLightBox: true,
+      selectedImage: image
     });
-  };
+  }
 
-  hideModal = () => {
+  hideLightBox = () => {
     this.setState({
       showLightBox: false
     });
-  };
+  }
 
   render() {
     return (
@@ -33,13 +34,13 @@ class PhotoGallery extends React.Component {
             return <ThumbnailContainer
               key={image.id}
               image={image}
-              clickHandler={this.showModal.bind(this)}
+              clickHandler={this.showLightBox.bind(this)}
             />
           })
         }
         <LightBox
           show={this.state.showLightBox}
-          handleClose={this.hideModal}
+          handleClose={this.hideLightBox}
           image={this.state.selectedImage}
         />
       </div>

@@ -8,6 +8,37 @@
   display: none;
 
   &.show {
-    display: block;
+    display: grid;
+    grid-template-rows: 100px minmax(500px, min-content) 75px;
+    align-items: center;
+  }
+
+  .close {
+    justify-self: right;
+    margin-right: 10%;
+    cursor: pointer;
+  }
+
+  .image-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    align-items: center;
+    justify-self: center;
+
+    .left-arrow, .right-arrow {
+      justify-self: center;
+      width: 60px;
+    }
+
+    .detailed-image {
+      display: block;
+      max-width: 70vw;
+      max-height: 80vh;
+    }
+  }
+
+  span {
+    color: white;
+    justify-self: center;
   }
 }
