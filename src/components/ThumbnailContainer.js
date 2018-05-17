@@ -6,14 +6,15 @@ const ThumbnailContainer = props => {
   const image = props.image;
 
   return (
-    <div className='ThumbnailContainer'>
+    <div className='ThumbnailContainer' onClick={props.clickHandler}>
       <img src={image.thumbnail_url} />
     </div>
   );
 }
 
 ThumbnailContainer.propTypes = {
-  image: PropTypes.object
+  image: PropTypes.object,
+  clickHandler: PropTypes.func
 };
 
 export default ThumbnailContainer;
