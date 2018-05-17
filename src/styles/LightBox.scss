@@ -10,7 +10,7 @@
 
   &.show {
     display: grid;
-    grid-template-rows: 100px minmax(500px, min-content) 75px;
+    grid-template-rows: 100px minmax(320px, min-content) 75px;
     align-items: center;
   }
 

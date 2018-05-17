@@ -7,7 +7,7 @@ const ThumbnailContainer = props => {
 
   return (
     <div className="ThumbnailContainer" onClick={() => props.clickHandler(image)}>
-      <img src={image.thumbnail_url} />
+      <img src={image.thumbnail_url} alt="thumbnail" />
     </div>
   );
 }

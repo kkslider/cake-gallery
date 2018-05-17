@@ -67,7 +67,7 @@ class PhotoGallery extends React.Component {
           goLeft={this.showPreviousImage}
           goRight={this.showNextImage}
         />
-      </div>
+      </div >
     );
   }
 }
