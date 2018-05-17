@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ThumbnailContainer from './ThumbnailContainer';
+import '../styles/PhotoGallery.css';
 
 const PhotoGallery = props => {
   return (
-    <div>
+    <div className="PhotoGallery">
       {
         props.images.map(image => {
           return <ThumbnailContainer

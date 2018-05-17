@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/PhotoGallery.scss';
+import '../styles/ThumbnailContainer.css';
 
 const ThumbnailContainer = props => {
   const image = props.image;
 
   return (
-    <div>
+    <div className='ThumbnailContainer'>
       <img src={image.thumbnail_url} />
     </div>
   );
